@@ -28,7 +28,7 @@ Now your library will be accessible via both
 npm install awesomeLib
 ```
 and
-```
+```HTML
 <script src="https://cdn.jsdelivr.net/gh/YOUR-GITHUB-LOGIN/awesomeLib/dist/awesomeLib.min.js"></script>
 ```
 
