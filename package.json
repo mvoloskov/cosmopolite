@@ -1,0 +1,21 @@
+{
+  "name": "cosmopolite",
+  "version": "1.0.0",
+  "description": "🤝 Make a ES Module for NPM and a dist file for <script> at the same time",
+  "repository": "git@github.com:uyouthe/cosmopolite.git",
+  "main": "index.js",
+  "author": "uyouthe",
+  "license": "BSL-1.0",
+  "scripts": {
+    "build-iife": "rollup -c"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm build-iife"
+    }
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "rollup": "^2.26.10"
+  }
+}
