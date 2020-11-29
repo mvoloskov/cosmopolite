@@ -32,4 +32,29 @@ and
 <script src="https://cdn.jsdelivr.net/gh/YOUR-GITHUB-LOGIN/awesomeLib/dist/awesomeLib.min.js"></script>
 ```
 
+## Limitations
+
+Your library name should be a valid JS name because it will be available as a callable function.
+```JS
+amazing-lib() // error
+```
+
+If you want to override it, your library name and your exposed function name should be different. You should modify the `rollup.config.js`:
+
+```JS
+
+import packageJson from './package.json'
+
+export default {
+    input: packageJson.main,
+    output: {
+        file: `dist/${packageJson.name}.js`,
+        format: 'iife',
+        name: 'keyboardCat'  // specify the callable name here
+    }
+}
+```
+
+The result would be that even if your `name` in `package.json` is uncallable `keyboard-cat`, your function will be named `keyboardCat` and that's a valid, callable name.
+
 Enjoy!
