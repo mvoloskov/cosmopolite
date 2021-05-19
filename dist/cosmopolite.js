@@ -6,6 +6,8 @@ var cosmopolite = (function () {
         console.log('Hello!');
     };
 
+    console.log('Look mum, global JS!');
+
     return index;
 
 }());
