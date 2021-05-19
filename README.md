@@ -17,7 +17,7 @@ It takes your NPM library you wrote with ES imports and makes the distributive s
 
 ## Usage
 
-1. Make your own repo, use this repo as a template
+1. Make your own repo using this repo as a template
 2. Go to `package.json` and change the `name` field. Let's say you changed it to `awesomeLib`
 3. Implement your library inside `src` folder
 4. Push changes. The `dist` folder will appear, there will be the `awesomeLib.js` file. This is your dist.
@@ -30,6 +30,24 @@ npm install awesomeLib
 and
 ```HTML
 <script src="https://cdn.jsdelivr.net/gh/YOUR-GITHUB-LOGIN/awesomeLib/dist/awesomeLib.min.js"></script>
+```
+
+## Devserver
+
+```
+npm run dev
+```
+
+This will start a devserver, usually at [localhost:5000](localhost:5000). Please note that you need to go to `index.html` and change
+
+```HTML
+<script src="dist/cosmopolite.js"></script>
+```
+
+to
+
+```HTML
+<script src="dist/YOUR_LIBRARY_NAME.js"></script>
 ```
 
 ## Limitations
