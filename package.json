@@ -9,6 +9,7 @@
   "scripts": {
     "build-iife": "rollup -c",
     "watch": "rollup -c --watch",
+    "test": "exit 0",
     "serve": "serve",
     "dev": "concurrently 'npm run watch' 'npm run serve'"
   },
